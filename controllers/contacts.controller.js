@@ -35,6 +35,6 @@ module.exports = class ContactsController {
         // Send the email 
         transporter.sendMail(mailOptions, (error, info) => { if (error) { return console.log(error); } else { return 'Email sent'; } });
         // send functionality return 
-        await transporter.sendMail(mailOptions);
+        return await transporter.sendMail(mailOptions);
     }
 }
